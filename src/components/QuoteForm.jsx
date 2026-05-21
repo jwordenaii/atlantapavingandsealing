@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { PHONE_HREF, PHONE } from "../data/cities";
+import { CONTACT_HREF, CONTACT_LABEL, PHONE } from "../data/cities";
 
 export default function QuoteForm({ city = "" }) {
   const [sent, setSent] = useState(false);
@@ -49,8 +49,8 @@ export default function QuoteForm({ city = "" }) {
       <div style={{ textAlign: "center", padding: "40px 24px", background: "rgba(245,166,35,0.08)", borderRadius: 8, border: "1px solid rgba(245,166,35,0.3)" }}>
         <div style={{ fontSize: "2rem", marginBottom: 12 }}>✓</div>
         <h3 style={{ fontSize: "1.3rem", marginBottom: 8 }}>Request Received</h3>
-        <p style={{ color: "#555", marginBottom: 20 }}>We'll call you back within 1 business hour. For faster response:</p>
-        <a href={PHONE_HREF} className="btn-primary">{PHONE}</a>
+        <p style={{ color: "#555", marginBottom: 20 }}>Your estimate request is ready to route to the verified business contact.</p>
+        <a href={CONTACT_HREF} className="btn-primary">{CONTACT_LABEL}</a>
       </div>
     );
   }
@@ -66,7 +66,7 @@ export default function QuoteForm({ city = "" }) {
         </div>
         <div>
           <label style={lbl}>Phone *</label>
-          <input required type="tel" style={inp} value={form.phone} onChange={e => set("phone", e.target.value)} placeholder="(404) 555-0100" />
+          <input required type="tel" style={inp} value={form.phone} onChange={e => set("phone", e.target.value)} placeholder="(704) 555-0100" />
         </div>
       </div>
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
@@ -82,7 +82,8 @@ export default function QuoteForm({ city = "" }) {
             <option>Residential Driveway</option>
             <option>Asphalt Sealcoating</option>
             <option>Crack Filling & Repair</option>
-            <option>QSR / Restaurant Paving</option>
+            <option>Milling & Resurfacing</option>
+            <option>Line Striping</option>
             <option>Lot Resurfacing</option>
             <option>Other</option>
           </select>
@@ -90,7 +91,7 @@ export default function QuoteForm({ city = "" }) {
       </div>
       <div>
         <label style={lbl}>City / Location</label>
-        <input style={inp} value={form.city} onChange={e => set("city", e.target.value)} placeholder="Atlanta, GA" />
+        <input style={inp} value={form.city} onChange={e => set("city", e.target.value)} placeholder="Charlotte, NC" />
       </div>
       <div>
         <label style={lbl}>Project Details</label>
@@ -100,7 +101,7 @@ export default function QuoteForm({ city = "" }) {
         {busy ? "Sending..." : "Request Free Estimate"}
       </button>
       <p style={{ fontSize: "0.85rem", color: "#888", textAlign: "center" }}>
-        Or call directly: <a href={PHONE_HREF} style={{ color: "var(--amber)", fontWeight: "bold" }}>{PHONE}</a> · Mon–Fri 7am–6pm
+        {PHONE ? <>Or call directly: <a href={CONTACT_HREF} style={{ color: "var(--amber)", fontWeight: "bold" }}>{PHONE}</a></> : "Add the verified Google Business Profile phone number before launch."}
       </p>
     </form>
   );

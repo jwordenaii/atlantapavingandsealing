@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { PHONE, PHONE_HREF } from "../data/cities";
+import { BUSINESS_NAME, CONTACT_HREF, CONTACT_LABEL } from "../data/cities";
 
 export default function Nav() {
   return (
@@ -20,9 +20,9 @@ export default function Nav() {
         fontWeight: "bold",
         textDecoration: "none",
       }}>
-        Atlanta Paving &amp; Sealing
+        {BUSINESS_NAME}
       </Link>
-      <a href={PHONE_HREF} style={{
+      <a href={CONTACT_HREF} style={{
         color: "var(--black)",
         textDecoration: "none",
         fontWeight: "bold",
@@ -30,7 +30,7 @@ export default function Nav() {
         padding: "10px 20px",
         borderRadius: 4,
       }}>
-        📞 {PHONE}
+        {CONTACT_LABEL}
       </a>
     </nav>
   );

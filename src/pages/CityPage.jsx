@@ -1,7 +1,8 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { useEffect } from "react";
-import { CITIES, SERVICES, PHONE, PHONE_HREF } from "../data/cities";
+import { BUSINESS_NAME, CITIES, CONTACT_HREF, CONTACT_LABEL, SERVICES } from "../data/cities";
 import QuoteForm from "../components/QuoteForm";
+import { buildBreadcrumbSchema, buildBusinessSchema, pageUrl, setSeo } from "../utils/seo";
 
 export default function CityPage() {
   const { slug } = useParams();
@@ -9,9 +10,18 @@ export default function CityPage() {
 
   useEffect(() => {
     if (city) {
-      document.title = city.metaTitle;
-      const meta = document.querySelector("meta[name='description']");
-      if (meta) meta.setAttribute("content", city.metaDesc);
+      setSeo({
+        title: city.metaTitle,
+        description: city.metaDesc,
+        canonical: pageUrl(`/${city.slug}`),
+        schema: [
+          buildBusinessSchema({ city, url: pageUrl(`/${city.slug}`) }),
+          buildBreadcrumbSchema([
+            { name: "Home", url: pageUrl("/") },
+            { name: `${city.name} Asphalt Paving`, url: pageUrl(`/${city.slug}`) },
+          ]),
+        ],
+      });
     }
     window.scrollTo(0, 0);
   }, [city]);
@@ -36,20 +46,20 @@ export default function CityPage() {
           </div>
         )}
         <div style={{ display: "inline-block", background: "var(--amber)", color: "var(--black)", padding: "6px 16px", borderRadius: 20, fontSize: "0.85rem", fontWeight: "bold", textTransform: "uppercase", letterSpacing: 1, marginBottom: 24 }}>
-          📍 {city.badge}
+          {city.badge}
         </div>
         <h1 style={{ fontSize: "clamp(1.8rem, 4vw, 3rem)", marginBottom: 16 }}>
           Asphalt Paving &amp;<br /><span style={{ color: "var(--amber)" }}>Sealing in {city.name}</span>
         </h1>
         <p style={{ fontSize: "1.1rem", color: "rgba(255,255,255,0.8)", maxWidth: 600, margin: "0 auto 32px" }}>
-          {city.lead1.split(".")[0]}. 40+ years of Georgia paving expertise. Free estimates.
+          {city.lead1.split(".")[0]}. Request a free estimate for asphalt paving, sealcoating, resurfacing, or repair.
         </p>
-        <a href={PHONE_HREF} className="btn-primary">Get a Free Estimate</a>
+        <a href={CONTACT_HREF} className="btn-primary">{CONTACT_LABEL}</a>
       </section>
 
       {/* TRUST BAR */}
       <div style={{ background: "var(--amber)", padding: "14px 24px", display: "flex", justifyContent: "center", gap: 40, flexWrap: "wrap" }}>
-        {["✓ 100+ QSR Locations Paved","✓ Commercial & Residential","✓ Georgia Licensed & Insured","✓ Free Estimates"].map(t => (
+        {["Commercial & Residential", `${city.stateName} Service Area`, "Driveways & Parking Lots", "Free Estimate Requests"].map(t => (
           <span key={t} style={{ color: "var(--black)", fontWeight: "bold", fontSize: "0.9rem" }}>{t}</span>
         ))}
       </div>
@@ -57,7 +67,7 @@ export default function CityPage() {
       {/* CONTENT */}
       <section>
         <div className="container" style={{ maxWidth: 900 }}>
-          <h2>Professional Paving in {city.name}, Georgia</h2>
+          <h2>Professional Paving in {city.name}, {city.state}</h2>
           <p className="lead">{city.lead1}</p>
           <p className="lead">{city.lead2}</p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 20, marginTop: 32 }}>
@@ -74,7 +84,7 @@ export default function CityPage() {
       {/* WHY US */}
       <section style={{ background: "var(--light-gray)" }}>
         <div className="container" style={{ maxWidth: 900 }}>
-          <h2>Why {city.name} Chooses Atlanta Paving &amp; Sealing</h2>
+          <h2>Why {city.name} Searches Find {BUSINESS_NAME}</h2>
           <p className="lead">{city.why}</p>
         </div>
       </section>
@@ -83,15 +93,15 @@ export default function CityPage() {
       <section id="quote">
         <div className="container" style={{ maxWidth: 720 }}>
           <h2 style={{ textAlign: "center" }}>Free Estimate for Your {city.name} Project</h2>
-          <p className="lead" style={{ textAlign: "center" }}>Submit your project details and we'll call back within 1 business hour.</p>
-          <QuoteForm city={`${city.name}, GA`} />
+          <p className="lead" style={{ textAlign: "center" }}>Submit your property location, pavement condition, and project goals.</p>
+          <QuoteForm city={`${city.name}, ${city.state}`} />
         </div>
       </section>
 
       {/* NEARBY */}
       <section style={{ background: "var(--light-gray)" }}>
         <div className="container">
-          <h2>Other Georgia Service Areas</h2>
+          <h2>Nearby Carolinas Service Areas</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 12, marginTop: 24 }}>
             {CITIES.filter(c => c.slug !== slug).slice(0, 8).map(c => (
               <Link key={c.slug} to={`/${c.slug}`} style={{ background: "var(--white)", border: "1px solid var(--border)", borderRadius: 6, padding: "14px 16px", textDecoration: "none", color: "var(--text)", transition: "border-color 0.2s, color 0.2s", display: "block" }}
@@ -109,8 +119,8 @@ export default function CityPage() {
       <section style={{ background: "var(--amber)", textAlign: "center", padding: "64px 24px" }}>
         <div className="container">
           <h2 style={{ color: "var(--black)", marginBottom: 16 }}>Ready to Get Your {city.name} Project Started?</h2>
-          <p style={{ color: "rgba(0,0,0,0.7)", marginBottom: 32 }}>Free estimates · Licensed &amp; insured · Georgia's QSR paving authority</p>
-          <a href={PHONE_HREF} className="btn-dark">📞 Call {PHONE}</a>
+          <p style={{ color: "rgba(0,0,0,0.7)", marginBottom: 32 }}>Driveways, parking lots, sealcoating, resurfacing, asphalt repair, and striping.</p>
+          <a href={CONTACT_HREF} className="btn-dark">{CONTACT_LABEL}</a>
         </div>
       </section>
     </>

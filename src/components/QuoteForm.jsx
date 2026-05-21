@@ -66,7 +66,7 @@ export default function QuoteForm({ city = "" }) {
         </div>
         <div>
           <label style={lbl}>Phone *</label>
-          <input required type="tel" style={inp} value={form.phone} onChange={e => set("phone", e.target.value)} placeholder="(404) 555-0100" />
+          <input required type="tel" style={inp} value={form.phone} onChange={e => set("phone", e.target.value)} placeholder="(704) 555-0100" />
         </div>
       </div>
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
@@ -82,7 +82,8 @@ export default function QuoteForm({ city = "" }) {
             <option>Residential Driveway</option>
             <option>Asphalt Sealcoating</option>
             <option>Crack Filling & Repair</option>
-            <option>QSR / Restaurant Paving</option>
+            <option>Parking Lot Striping</option>
+            <option>HOA / Subdivision Paving</option>
             <option>Lot Resurfacing</option>
             <option>Other</option>
           </select>
@@ -90,7 +91,7 @@ export default function QuoteForm({ city = "" }) {
       </div>
       <div>
         <label style={lbl}>City / Location</label>
-        <input style={inp} value={form.city} onChange={e => set("city", e.target.value)} placeholder="Atlanta, GA" />
+        <input style={inp} value={form.city} onChange={e => set("city", e.target.value)} placeholder="Charlotte, NC" />
       </div>
       <div>
         <label style={lbl}>Project Details</label>
@@ -100,7 +101,7 @@ export default function QuoteForm({ city = "" }) {
         {busy ? "Sending..." : "Request Free Estimate"}
       </button>
       <p style={{ fontSize: "0.85rem", color: "#888", textAlign: "center" }}>
-        Or call directly: <a href={PHONE_HREF} style={{ color: "var(--amber)", fontWeight: "bold" }}>{PHONE}</a> · Mon–Fri 7am–6pm
+        Or call directly: <a href={PHONE_HREF} style={{ color: "var(--amber)", fontWeight: "bold" }}>{PHONE}</a> · Mon–Fri 7am–6pm · Sat 7am–2pm
       </p>
     </form>
   );

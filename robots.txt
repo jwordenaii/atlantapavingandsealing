@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.atlantaasphaltpavingpros.com/sitemap.xml
+Sitemap: https://www.carolinablacktop.com/sitemap.xml

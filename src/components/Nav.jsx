@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { PHONE, PHONE_HREF } from "../data/cities";
+import { PHONE, PHONE_HREF, BUSINESS_NAME } from "../data/cities";
 
 export default function Nav() {
   return (
@@ -13,14 +13,16 @@ export default function Nav() {
       position: "sticky",
       top: 0,
       zIndex: 100,
+      borderBottom: "3px solid var(--amber)",
     }}>
       <Link to="/" style={{
-        color: "var(--amber)",
-        fontSize: "1.1rem",
+        color: "var(--white)",
+        fontSize: "1.15rem",
         fontWeight: "bold",
         textDecoration: "none",
+        letterSpacing: "0.5px",
       }}>
-        Atlanta Paving &amp; Sealing
+        <span style={{ color: "var(--amber)" }}>Carolina</span> Blacktop
       </Link>
       <a href={PHONE_HREF} style={{
         color: "var(--black)",
@@ -29,6 +31,7 @@ export default function Nav() {
         background: "var(--amber)",
         padding: "10px 20px",
         borderRadius: 4,
+        fontSize: "0.95rem",
       }}>
         📞 {PHONE}
       </a>

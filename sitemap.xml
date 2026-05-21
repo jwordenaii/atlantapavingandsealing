@@ -1,29 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.atlantaasphaltpavingpros.com/</loc><priority>1.0</priority></url>
-  <url><loc>https://www.atlantaasphaltpavingpros.com/alpharetta-asphalt-paving</loc><priority>0.8</priority></url>
-  <url><loc>https://www.atlantaasphaltpavingpros.com/atlanta-asphalt-paving</loc><priority>0.8</priority></url>
-  <url><loc>https://www.atlantaasphaltpavingpros.com/augusta-asphalt-paving</loc><priority>0.8</priority></url>
-  <url><loc>https://www.atlantaasphaltpavingpros.com/braselton-asphalt-paving</loc><priority>0.8</priority></url>
-  <url><loc>https://www.atlantaasphaltpavingpros.com/buckhead-asphalt-paving</loc><priority>0.8</priority></url>
-  <url><loc>https://www.atlantaasphaltpavingpros.com/canton-asphalt-paving</loc><priority>0.8</priority></url>
-  <url><loc>https://www.atlantaasphaltpavingpros.com/chamblee-asphalt-paving</loc><priority>0.8</priority></url>
-  <url><loc>https://www.atlantaasphaltpavingpros.com/columbus-asphalt-paving</loc><priority>0.8</priority></url>
-  <url><loc>https://www.atlantaasphaltpavingpros.com/decatur-asphalt-paving</loc><priority>0.8</priority></url>
-  <url><loc>https://www.atlantaasphaltpavingpros.com/dunwoody-asphalt-paving</loc><priority>0.8</priority></url>
-  <url><loc>https://www.atlantaasphaltpavingpros.com/gainesville-asphalt-paving</loc><priority>0.8</priority></url>
-  <url><loc>https://www.atlantaasphaltpavingpros.com/johns-creek-asphalt-paving</loc><priority>0.8</priority></url>
-  <url><loc>https://www.atlantaasphaltpavingpros.com/kennesaw-asphalt-paving</loc><priority>0.8</priority></url>
-  <url><loc>https://www.atlantaasphaltpavingpros.com/mableton-asphalt-paving</loc><priority>0.8</priority></url>
-  <url><loc>https://www.atlantaasphaltpavingpros.com/marietta-asphalt-paving</loc><priority>0.8</priority></url>
-  <url><loc>https://www.atlantaasphaltpavingpros.com/mcdonough-asphalt-paving</loc><priority>0.8</priority></url>
-  <url><loc>https://www.atlantaasphaltpavingpros.com/midtown-atlanta-paving</loc><priority>0.8</priority></url>
-  <url><loc>https://www.atlantaasphaltpavingpros.com/peachtree-city-asphalt-paving</loc><priority>0.8</priority></url>
-  <url><loc>https://www.atlantaasphaltpavingpros.com/pooler-savannah-paving</loc><priority>0.8</priority></url>
-  <url><loc>https://www.atlantaasphaltpavingpros.com/roswell-asphalt-paving</loc><priority>0.8</priority></url>
-  <url><loc>https://www.atlantaasphaltpavingpros.com/sandy-springs-asphalt-paving</loc><priority>0.8</priority></url>
-  <url><loc>https://www.atlantaasphaltpavingpros.com/savannah-asphalt-paving</loc><priority>0.8</priority></url>
-  <url><loc>https://www.atlantaasphaltpavingpros.com/smyrna-asphalt-paving</loc><priority>0.8</priority></url>
-  <url><loc>https://www.atlantaasphaltpavingpros.com/warner-robins-paving</loc><priority>0.8</priority></url>
-  <url><loc>https://www.atlantaasphaltpavingpros.com/woodstock-asphalt-paving</loc><priority>0.8</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.carolinablacktop.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- North Carolina City Pages -->
+  <url><loc>https://www.carolinablacktop.com/charlotte-asphalt-paving</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.carolinablacktop.com/concord-asphalt-paving</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.carolinablacktop.com/huntersville-asphalt-paving</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.carolinablacktop.com/cornelius-asphalt-paving</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.carolinablacktop.com/mooresville-asphalt-paving</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.carolinablacktop.com/kannapolis-asphalt-paving</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.carolinablacktop.com/gastonia-asphalt-paving</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.carolinablacktop.com/matthews-asphalt-paving</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.carolinablacktop.com/mint-hill-asphalt-paving</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.carolinablacktop.com/monroe-asphalt-paving</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.carolinablacktop.com/harrisburg-asphalt-paving</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.carolinablacktop.com/davidson-asphalt-paving</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.carolinablacktop.com/pineville-asphalt-paving</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.carolinablacktop.com/waxhaw-asphalt-paving</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.carolinablacktop.com/belmont-asphalt-paving</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- South Carolina City Pages -->
+  <url><loc>https://www.carolinablacktop.com/rock-hill-asphalt-paving</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.carolinablacktop.com/fort-mill-asphalt-paving</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.carolinablacktop.com/indian-land-asphalt-paving</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.carolinablacktop.com/york-sc-asphalt-paving</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.carolinablacktop.com/clover-asphalt-paving</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.carolinablacktop.com/lake-wylie-asphalt-paving</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.carolinablacktop.com/tega-cay-asphalt-paving</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
 </urlset>

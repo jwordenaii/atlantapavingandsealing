@@ -11,6 +11,7 @@
     X-Frame-Options             = "DENY"
     X-Content-Type-Options      = "nosniff"
     Strict-Transport-Security   = "max-age=31536000; includeSubDomains; preload"
+    Referrer-Policy             = "strict-origin-when-cross-origin"
 
 [[headers]]
   for = "/assets/*"
@@ -23,53 +24,63 @@
   to     = "/index.html"
   status = 200
 
-# 301 redirects from old short URLs
+# Convenience short-URL redirects (301 permanent)
 [[redirects]]
-  from = "/atlanta-paving"
-  to   = "/atlanta-asphalt-paving"
+  from = "/charlotte"
+  to   = "/charlotte-asphalt-paving"
   status = 301
 
 [[redirects]]
-  from = "/marietta-paving"
-  to   = "/marietta-asphalt-paving"
+  from = "/charlotte-paving"
+  to   = "/charlotte-asphalt-paving"
   status = 301
 
 [[redirects]]
-  from = "/roswell-paving"
-  to   = "/roswell-asphalt-paving"
+  from = "/rock-hill"
+  to   = "/rock-hill-asphalt-paving"
   status = 301
 
 [[redirects]]
-  from = "/alpharetta-paving"
-  to   = "/alpharetta-asphalt-paving"
+  from = "/rock-hill-paving"
+  to   = "/rock-hill-asphalt-paving"
   status = 301
 
 [[redirects]]
-  from = "/sandy-springs-paving"
-  to   = "/sandy-springs-asphalt-paving"
+  from = "/fort-mill"
+  to   = "/fort-mill-asphalt-paving"
   status = 301
 
 [[redirects]]
-  from = "/decatur-paving"
-  to   = "/decatur-asphalt-paving"
+  from = "/fort-mill-paving"
+  to   = "/fort-mill-asphalt-paving"
   status = 301
 
 [[redirects]]
-  from = "/smyrna-paving"
-  to   = "/smyrna-asphalt-paving"
+  from = "/indian-land"
+  to   = "/indian-land-asphalt-paving"
   status = 301
 
 [[redirects]]
-  from = "/savannah-paving"
-  to   = "/savannah-asphalt-paving"
+  from = "/indian-land-paving"
+  to   = "/indian-land-asphalt-paving"
   status = 301
 
 [[redirects]]
-  from = "/augusta-paving"
-  to   = "/augusta-asphalt-paving"
+  from = "/concord"
+  to   = "/concord-asphalt-paving"
   status = 301
 
 [[redirects]]
-  from = "/columbus-paving"
-  to   = "/columbus-asphalt-paving"
+  from = "/huntersville"
+  to   = "/huntersville-asphalt-paving"
+  status = 301
+
+[[redirects]]
+  from = "/mooresville"
+  to   = "/mooresville-asphalt-paving"
+  status = 301
+
+[[redirects]]
+  from = "/gastonia"
+  to   = "/gastonia-asphalt-paving"
   status = 301

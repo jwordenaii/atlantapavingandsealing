@@ -1,6 +1,6 @@
 export const PHONE = "(470) 485-7715";
 export const PHONE_HREF = "tel:+14704857715";
-export const DOMAIN = "https://www.atlantapavingandsealing.com";
+export const DOMAIN = "https://www.atlantaasphaltpavingpros.com";
 
 export const SERVICES = [
   {

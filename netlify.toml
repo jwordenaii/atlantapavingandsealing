@@ -17,59 +17,59 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# 301 redirects from common short URLs
-[[redirects]]
-  from = "/charlotte-paving"
-  to   = "/charlotte-asphalt-paving"
-  status = 301
-
-[[redirects]]
-  from = "/rock-hill-paving"
-  to   = "/rock-hill-asphalt-paving"
-  status = 301
-
-[[redirects]]
-  from = "/york-paving"
-  to   = "/york-sc-asphalt-paving"
-  status = 301
-
-[[redirects]]
-  from = "/indian-land-paving"
-  to   = "/indian-land-asphalt-paving"
-  status = 301
-
-[[redirects]]
-  from = "/fort-mill-paving"
-  to   = "/fort-mill-asphalt-paving"
-  status = 301
-
-[[redirects]]
-  from = "/asphalt-paving-charlotte-nc"
-  to   = "/charlotte-asphalt-paving"
-  status = 301
-
-[[redirects]]
-  from = "/asphalt-paving-rock-hill-sc"
-  to   = "/rock-hill-asphalt-paving"
-  status = 301
-
-[[redirects]]
-  from = "/atlanta-*"
-  to   = "/"
-  status = 301
-
-[[redirects]]
-  from = "/marietta-*"
-  to   = "/"
-  status = 301
-
-[[redirects]]
-  from = "/savannah-*"
-  to   = "/"
-  status = 301
-
-# SPA fallback - all app routes served by index.html
+# SPA fallback — all routes served by index.html
 [[redirects]]
   from   = "/*"
   to     = "/index.html"
   status = 200
+
+# 301 redirects from old short URLs
+[[redirects]]
+  from = "/atlanta-paving"
+  to   = "/atlanta-asphalt-paving"
+  status = 301
+
+[[redirects]]
+  from = "/marietta-paving"
+  to   = "/marietta-asphalt-paving"
+  status = 301
+
+[[redirects]]
+  from = "/roswell-paving"
+  to   = "/roswell-asphalt-paving"
+  status = 301
+
+[[redirects]]
+  from = "/alpharetta-paving"
+  to   = "/alpharetta-asphalt-paving"
+  status = 301
+
+[[redirects]]
+  from = "/sandy-springs-paving"
+  to   = "/sandy-springs-asphalt-paving"
+  status = 301
+
+[[redirects]]
+  from = "/decatur-paving"
+  to   = "/decatur-asphalt-paving"
+  status = 301
+
+[[redirects]]
+  from = "/smyrna-paving"
+  to   = "/smyrna-asphalt-paving"
+  status = 301
+
+[[redirects]]
+  from = "/savannah-paving"
+  to   = "/savannah-asphalt-paving"
+  status = 301
+
+[[redirects]]
+  from = "/augusta-paving"
+  to   = "/augusta-asphalt-paving"
+  status = 301
+
+[[redirects]]
+  from = "/columbus-paving"
+  to   = "/columbus-asphalt-paving"
+  status = 301
